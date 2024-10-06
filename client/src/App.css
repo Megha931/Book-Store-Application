@@ -1,0 +1,67 @@
+/* styles.css */
+
+body {
+  background-color: #f9f9f9; /* Light background */
+  color: #333; /* Darker text for readability */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Added margin to ensure headers are clear */
+h1, h2, h3 {
+  color: #1a73e8; /* Blue color for headings */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Ensure the books container allows scrolling */
+.books-container {
+  max-height: 80vh; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px; /* Add padding */
+  border: 1px solid #ccc; /* Optional border for visibility */
+  background-color: #f9f9f9; /* Optional background color */
+}
+
+/* Button styles remain unchanged */
+button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0f5bcf;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Container for general elements */
+.container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* New styling for the header section */
+.header {
+  margin: 20px 0; /* Ensure space around the header */
+  text-align: center; /* Center the text */
+}
