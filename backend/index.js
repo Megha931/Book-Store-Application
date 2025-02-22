@@ -1,18 +1,18 @@
 import express from "express";
-import mysql2 from "mysql2/promise"; // Using promise-based mysql2
+import mysql2 from "mysql2/promise"; 
 import cors from "cors";
 import dotenv from "dotenv";
 
-// Load environment variables from .env file
+
 dotenv.config();
 
 const app = express();
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
-// Create MySQL connection pool
+
 const db = mysql2.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -20,21 +20,20 @@ const db = mysql2.createPool({
   database: process.env.DB_NAME,
   port: process.env.DB_PORT,
   waitForConnections: true,
-  connectionLimit: 10,  // Adjust the limit as needed
+  connectionLimit: 10,  
   queueLimit: 0,
 });
 
-// Test MySQL connection
+
 db.getConnection()
   .then(connection => {
     console.log('Connected to the database.');
-    connection.release(); // Release the connection back to the pool
-  })
+    connection.release(); 
   .catch(err => {
     console.error('Database connection failed:', err.stack);
   });
 
-// Route to fetch all books
+
 app.get("/api/books", async (req, res) => {
   try {
     const [results] = await db.query("SELECT * FROM books");
@@ -45,7 +44,7 @@ app.get("/api/books", async (req, res) => {
   }
 });
 
-// Route to add a new book
+
 app.post("/api/books", async (req, res) => {
   const { title, description, price, cover } = req.body;
 
@@ -66,12 +65,12 @@ app.post("/api/books", async (req, res) => {
   }
 });
 
-// Route to update a book
+
 app.put("/api/books/:id", async (req, res) => {
   const bookId = req.params.id;
   const { title, description, price, cover } = req.body;
 
-  // Validate that all fields are provided
+
   if (!title || !description || !price || !cover) {
     return res.status(400).json({ error: "All fields are required" });
   }
@@ -93,7 +92,7 @@ app.put("/api/books/:id", async (req, res) => {
   }
 });
 
-// Route to delete a book
+
 app.delete("/api/books/:id", async (req, res) => {
   const bookId = req.params.id;
 
@@ -111,7 +110,7 @@ app.delete("/api/books/:id", async (req, res) => {
   }
 });
 
-// Start the server
+
 const PORT = process.env.PORT || 8800;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
