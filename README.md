@@ -24,10 +24,12 @@ git clone https://github.com/Megha931/Book-Store-Application.git
 Install Dependencies
 npm install
 
-Run the Backend Server
+Run the Backend Server: 
+
 npm run server
 
-Run the Frontend
+Run the Frontend:
+
 npm start
 
 The application will be available at http://localhost:3000 (or the port specified in your setup).
