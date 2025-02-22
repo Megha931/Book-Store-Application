@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./Books.css"; // Importing the CSS for styling
+import "./Books.css"; 
+
 
 const Books = ({ bookListChanged }) => {
   const [books, setBooks] = useState([]);
@@ -16,7 +17,7 @@ const Books = ({ bookListChanged }) => {
     }
   };
 
-  // Fetch books whenever the bookListChanged prop updates
+ 
   useEffect(() => {
     fetchAllBooks();
   }, [bookListChanged]);
@@ -25,7 +26,7 @@ const Books = ({ bookListChanged }) => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:8800/api/books/${id}`);
-      fetchAllBooks(); // Re-fetch books after deletion
+      fetchAllBooks(); 
     } catch (err) {
       console.error("Error deleting book:", err);
     }
@@ -35,7 +36,7 @@ const Books = ({ bookListChanged }) => {
     <div>
       <div className="header">
         <img src="/assets/book.png" alt="Book Icon" className="header-icon" />
-        <h1>The Reading Room</h1> {/* This will now have the same styling as h2 */}
+        <h1>The Reading Room</h1> 
       </div>
       <div className="books-container">
         <div className="books">
