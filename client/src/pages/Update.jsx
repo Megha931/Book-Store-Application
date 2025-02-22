@@ -6,7 +6,7 @@ import "./Update.css";
 const Update = () => {
   const [book, setBook] = useState({
     title: "",
-    description: "", // changed from desc to description
+    description: "", 
     price: null,
     cover: "",
   });
@@ -46,7 +46,7 @@ const Update = () => {
         rows={5}
         type="text"
         placeholder="Book description"
-        name="description" // updated to description
+        name="description"
         onChange={handleChange}
       />
       <input
