@@ -18,20 +18,20 @@ const Add = ({ onBookAdded }) => {
     const { name, value } = e.target;
     setBook((prev) => ({
       ...prev,
-      [name]: name === "price" ? parseFloat(value) : value, // Convert price to a number
+      [name]: name === "price" ? parseFloat(value) : value, 
     }));
   };
 
   const handleClick = async (e) => {
     e.preventDefault();
-    setError(false); // Reset error state before submission
+    setError(false); 
     if (!book.title || !book.description || book.price === null || !book.cover) {
       setError("All fields are required.");
       return;
     }
     try {
-      await axios.post("http://localhost:8800/api/books", book); // Ensure the correct endpoint
-      onBookAdded(); // Call this function to refresh the book list
+      await axios.post("http://localhost:8800/api/books", book); 
+      onBookAdded();
       navigate("/");
     } catch (err) {
       console.error(err);
