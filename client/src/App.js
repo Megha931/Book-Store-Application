@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // Add useState here
+import React, { useState } from "react"; 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Add from "./pages/Add";
 import Books from "./pages/Books";
@@ -7,16 +7,15 @@ import Update from "./pages/Update";
 import "./App.css";
 
 function App() {
-  const [bookListChanged, setBookListChanged] = useState(false); // Now useState is properly defined
-
+  const [bookListChanged, setBookListChanged] = useState(false); 
   const handleBookAdded = () => {
-    setBookListChanged(!bookListChanged); // This triggers re-fetch in Books.jsx
+    setBookListChanged(!bookListChanged); 
   };
 
   return (
     <div className="app">
       <BrowserRouter>
-         {/* Add the Navbar component here */}
+        
         <Routes>
           <Route path="/" element={<Books bookListChanged={bookListChanged} />} />
           <Route path="/add" element={<Add onBookAdded={handleBookAdded} />} />
