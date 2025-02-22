@@ -11,13 +11,15 @@ Database Integration: Stores book details securely.
 ## Technologies Used
 
 Frontend: JavaScript, React
+
 Backend: Express.js
+
 Database: MySQL
 
 ## Setup Instructions
 
 Clone the Repository
-git clone https://github.com/yourusername/BookStoreApp.git
+git clone https://github.com/Megha931/Book-Store-Application.git
 
 Install Dependencies
 npm install
