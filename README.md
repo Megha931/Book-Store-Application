@@ -25,29 +25,24 @@ Other Tools: npm, Axios (for API calls)
 ## 📁 Setup Instructions
 Follow the steps below to run the project locally:
 
-1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/Megha931/Book-Store-Application.git
+Clone the Repository
+
 cd Book-Store-Application
-2. Install Dependencies
-bash
-Copy
-Edit
+
+Install Dependencies
+
 npm install
-3. Run the Backend Server
+
+Run the Backend Server
+
 Make sure your MySQL server is running and database credentials are correctly configured.
 
-bash
-Copy
-Edit
 npm run server
-4. Run the Frontend Application
-bash
-Copy
-Edit
+
+Run the Frontend Application
+
 npm start
+
 The app will launch at:
 👉 http://localhost:3000
 
