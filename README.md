@@ -50,3 +50,9 @@ Edit
 npm start
 The app will launch at:
 👉 http://localhost:3000
+
+
+
+![image](https://github.com/user-attachments/assets/4fc54558-5092-47d8-85ed-9049e86f5aac)
+![image](https://github.com/user-attachments/assets/4fade0b6-7bd3-4106-9e3a-7244b83e9f01)
+
